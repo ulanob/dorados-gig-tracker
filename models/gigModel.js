@@ -63,17 +63,6 @@ gigSchema.pre('save', function (next) {
   next();
 })
 
-// Middlware examples:
-// gigSchema.pre('save', function (next) {
-//   console.log('Second pre on "save"')
-//   next();
-// })
-
-// gigSchema.post('save', function (doc, next) {
-//   console.log(doc);
-//   next();
-// })
-
 // QUERY MIDDLEWARE 
 gigSchema.pre(/^find/, function (next) {
   this.find({ public: { $ne: false } })
