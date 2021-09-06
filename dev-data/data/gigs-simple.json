@@ -24,10 +24,5 @@
     "name": "Test Gig",
     "time": "2pm",
     "venue": "Caminos"
-  },
-  {
-    "id": 4,
-    "title": "derp",
-    "duration": "yass"
   }
 ]
