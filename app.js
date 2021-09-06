@@ -7,13 +7,14 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const compression = require('compression');
 
-
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController')
 const gigRouter = require('./routes/gigRoutes');
 const userRouter = require('./routes/userRoutes');
 
 const app = express();
+
+app.enable('trust proxy');
 
 // Global Middleware
 
