@@ -1,0 +1,33 @@
+[
+  {
+    "id": 0,
+    "title": "Caminos Wednesday",
+    "duration": 2,
+    "location": "Caminos",
+    "description": "Mariachi Wednesdays at Caminos"
+  },
+  {
+    "id": 1,
+    "title": "Tequila Wednesday",
+    "duration": 2,
+    "location": "Tequila",
+    "description": "Mariachi Fridays at Tequila"
+  },
+  {
+    "id": 2,
+    "name": "Test Gig",
+    "time": "2pm",
+    "venue": "Caminos"
+  },
+  {
+    "id": 3,
+    "name": "Test Gig",
+    "time": "2pm",
+    "venue": "Caminos"
+  },
+  {
+    "id": 4,
+    "title": "derp",
+    "duration": "yass"
+  }
+]
