@@ -4,14 +4,20 @@ const catchAsync = require('./../utils/catchAsync');
 const AppError = require('./../utils/appError')
 
 exports.getAllGigs = catchAsync(async (req, res, next) => {
-  const features = new APIFeatures(Gig.find(), req.query)
+  const canSeePrivateGigs = ['member', 'admin'].includes(req.user.role);
+
+  const filter = canSeePrivateGigs
+    ? {}
+    : { public: { $ne: false } };
+
+  const features = new APIFeatures(Gig.find(filter), req.query)
     .filter()
     .sort()
     .limitFields()
     .paginate();
+
   const gigs = await features.query;
 
-  // Send Response
   res.status(200).json({
     status: 'success',
     results: gigs.length,

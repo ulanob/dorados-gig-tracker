@@ -64,10 +64,10 @@ gigSchema.pre('save', function (next) {
 })
 
 // QUERY MIDDLEWARE 
-gigSchema.pre(/^find/, function (next) {
-  this.find({ public: { $ne: false } })
-  next();
-});
+// gigSchema.pre(/^find/, function (next) {
+//   this.find({ public: { $ne: false } })
+//   next();
+// });
 
 const Gig = mongoose.model('Gig', gigSchema);
 
